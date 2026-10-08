@@ -461,3 +461,4 @@ nav.over{background:var(--hero);border-color:transparent}
 /* section buttons: light green, not dark */
 .sec-head .btn{background:color-mix(in srgb,var(--accent) 16%,var(--bg));color:var(--accent);border-color:transparent}
 .sec-head .btn:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+@media (max-width:360px){nav .wrap{gap:8px}nav .me{font-size:15px}nav .links{gap:8px}nav .links a{font-size:13px}}
