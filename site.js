@@ -42,6 +42,24 @@
     }
   }
 
+  // teaching tabs: one panel at a time (all panels show if JS is off)
+  var tabs = [].slice.call(document.querySelectorAll('[role="tab"]'));
+  function pick(t) {
+    tabs.forEach(function (x) {
+      var on = x === t;
+      x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { pick(t); });
+    t.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { var n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); }
+    });
+  });
+  if (tabs.length) pick(tabs[0]);
+
   // copy email
   [].slice.call(document.querySelectorAll('.copy')).forEach(function (b) {
     b.addEventListener('click', function () {

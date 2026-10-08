@@ -467,3 +467,44 @@ nav.over{background:var(--hero);border-color:transparent}
 .rc:hover{box-shadow:inset 0 3px 0 var(--accent)}
 .rc .ov-more{padding-top:16px}
 .rc:hover .ov-more i{transform:translateX(4px)}
+
+/* ---- nav icons: hidden on desktop, icon over label in the phone bottom bar ---- */
+nav .links a i{display:none}
+@media (max-width:640px){
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  nav .links{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--bg);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+  nav .links a,nav .links a[href$="#contact"]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:52px;font-size:12px;color:var(--soft)}
+  nav .links a.hide-sm{display:none}
+  nav .links a i{display:block;font-size:22px}
+  nav .links a::after{display:none}
+  nav .links a.on,nav .links a[aria-current]{color:var(--accent);font-weight:600}
+  nav .links .theme{position:fixed;top:14px;right:16px;width:36px;height:36px}
+  nav.over .links{background:var(--bg)}
+}
+
+/* ---- teaching page ---- */
+.tabs{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--bg2);margin:0 0 36px}
+.tab{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;height:40px;padding:0 16px 0 10px;border:0;border-radius:999px;background:none;font:inherit;font-size:15px;font-weight:500;color:var(--soft);cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+.tab img{width:24px;height:24px;object-fit:contain;flex:none;background:#fff;border-radius:999px;padding:2px}
+.tab[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 4px 12px -8px rgba(20,24,27,.35)}
+.tab:hover{color:var(--ink)}
+.t-role{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin:0 0 6px}
+.t-role b{font-size:22px;font-weight:500;letter-spacing:-.01em}
+.t-role span{color:var(--accent);font-weight:600;font-size:15px}
+.t-sum{font-size:17px;line-height:1.6;color:var(--body);max-width:62ch;margin:0 0 40px}
+.course-list{padding-bottom:112px}
+.course{display:grid;grid-template-columns:300px minmax(0,1fr);gap:40px;padding:28px 0;border-top:1px solid var(--line)}
+.c-head h3{font-size:21px;font-weight:500;line-height:1.3;margin:0 0 6px}
+.c-code{font-size:14px;color:var(--soft)}
+.course ul{margin:0;padding-left:20px;color:var(--body);font-size:16px;line-height:1.6;max-width:62ch}
+.course li{margin-bottom:8px}
+.course li::marker{color:var(--accent)}
+.course li.sk{list-style:none;margin-left:-20px;height:12px;border-radius:6px;background:var(--bg2);margin-top:8px;margin-bottom:14px}
+.course li.sk.short{width:55%}
+.js .panel[hidden]{display:none}
+@media (max-width:900px){.course{grid-template-columns:1fr;gap:12px}}
+@media (max-width:640px){
+  .course-list{padding-bottom:72px}
+  .course{padding:22px 0}
+}
+@media (max-width:380px){.tab{font-size:14px;padding:0 12px 0 8px;gap:6px}}
