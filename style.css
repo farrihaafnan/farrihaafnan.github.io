@@ -412,3 +412,12 @@ nav.over{background:var(--hero);border-color:transparent}
   .eng-grid p{font-size:14px}
   .sec-head .btn{height:40px;padding:0 14px;font-size:15px}
 }
+/* section buttons: one place (top right), one colour (09/10) */
+.sec-head .btn{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.sec-head .btn:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.sec-head .btn i{transition:transform .2s}
+.sec-head .btn:hover i{transform:translateX(3px)}
+/* overview cards are teasers: question, then the way in */
+.ov-more{display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding-top:10px;font-size:15px;font-weight:500;color:var(--accent)}
+.ov-more i{transition:transform .2s}
+.ov-card:hover .ov-more i{transform:translateX(4px)}
