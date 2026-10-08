@@ -421,3 +421,43 @@ nav.over{background:var(--hero);border-color:transparent}
 .ov-more{display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding-top:10px;font-size:15px;font-weight:500;color:var(--accent)}
 .ov-more i{transition:transform .2s}
 .ov-card:hover .ov-more i{transform:translateX(4px)}
+/* research overview v3: same anatomy as the engineering cards (cover, then text) */
+.rc{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.rc-cover{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;margin-bottom:16px;display:grid;place-items:center}
+.rc-cover.t1{background:color-mix(in srgb,#7D8C4E 24%,var(--bg))}
+.rc-cover.t2{background:color-mix(in srgb,#8A854A 24%,var(--bg))}
+.rc-cover.t3{background:color-mix(in srgb,#9C8B52 22%,var(--bg))}
+.rc-cover svg{width:100%;height:100%;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.rc:hover .rc-cover svg{transform:scale(1.04)}
+.rc-cover text{font:500 11px 'Hanken Grotesk',sans-serif;fill:var(--soft);text-anchor:middle}
+.rc-cover text[text-anchor="end"]{text-anchor:end}
+.g-zone{fill:color-mix(in srgb,var(--card) 70%,transparent);stroke:none}
+.g-zone.dashed{fill:none;stroke:var(--accent);stroke-width:1.4;stroke-dasharray:4 4}
+.g-dot{fill:var(--accent)}
+.g-ring{fill:var(--card);stroke:var(--accent);stroke-width:1.4}
+.g-ring.dashed{stroke-dasharray:3 2.5}
+.g-model{fill:var(--accent)}
+.g-link,.g-head{fill:none;stroke:var(--accent);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.g-edge{stroke:var(--soft);stroke-width:1;opacity:.45}
+.g-axis{stroke:var(--soft);stroke-width:1;opacity:.6}
+.g-path{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.g-halo{fill:none;stroke:var(--accent);stroke-width:1.2;opacity:.5}
+.rc-flag{position:absolute;left:12px;top:12px;padding:4px 10px;border-radius:999px;background:var(--card);font-size:13px;font-weight:500;color:var(--ink)}
+.rc h3{font-size:20px;line-height:1.3;font-weight:500;margin:8px 0 6px}
+.rc p{margin:0;font-size:15px;line-height:1.55;color:var(--soft)}
+.rc-people{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-direction:column;gap:8px}
+.rc-people li{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--ink)}
+.rc-people img{width:24px;height:24px;object-fit:contain;flex:none;border-radius:6px;background:#fff;padding:2px}
+.ov{gap:28px}
+@media (max-width:900px){.ov{gap:36px}}
+.rc-cover text.g-on{fill:var(--accent-ink);font-weight:600}
+/* 09/10: drawings live on the research page; home cards are text with an accent rule */
+.rc{padding-top:18px;border-top:2px solid var(--accent)}
+.rc h3{margin-top:10px}
+.rc:hover h3{color:var(--accent)}
+.rp-cover{aspect-ratio:auto;height:240px;margin:0 0 24px}
+.rp-cover svg{transform:none!important}
+@media (max-width:640px){.rp-cover{height:auto;aspect-ratio:16/9;margin-bottom:18px}}
+/* section buttons: light green, not dark */
+.sec-head .btn{background:color-mix(in srgb,var(--accent) 16%,var(--bg));color:var(--accent);border-color:transparent}
+.sec-head .btn:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
