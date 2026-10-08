@@ -349,7 +349,7 @@ nav.over{background:var(--hero);border-color:transparent}
   .card-end{padding:32px 22px}
   .ce-note{font-size:17px}
   .ce-actions{display:grid;grid-template-columns:1fr 1fr}
-  .ce-actions .copy{grid-column:1/-1}
+  .ce-actions .copy{grid-column:auto}
   .cbtn{justify-content:center}
   .ce-side .who{margin:0}
 }
