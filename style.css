@@ -174,7 +174,7 @@ nav .me{white-space:nowrap}
 nav .wrap{gap:16px}
 @media (max-width:900px){
   nav .links a{font-size:14px}
-  .project>div,.detail>div{order:-1}
+  .project>div:last-child,.detail>div:last-child{order:-1}
 }
 
 /* ---- round 3 ---- */
@@ -313,3 +313,44 @@ nav.over{background:var(--hero);border-color:transparent}
 .portrait-wrap::before{display:none}
 .hero .portrait{aspect-ratio:4/5;border-radius:20px;box-shadow:0 30px 60px -30px rgba(22,36,27,.45),0 8px 18px -10px rgba(22,36,27,.25)}
 .hero .portrait img{object-position:42% 28%}
+
+/* phone: story first, details after, tighter rhythm */
+@media (max-width:900px){
+  .project .b-meta,.detail .b-meta{padding-top:20px;border-top:1px solid var(--line);gap:18px}
+  .b-when b{font-size:18px}
+  ul.meta,ul.b-people{grid-template-columns:1fr;gap:14px}
+  .tags-s{flex-direction:row;flex-wrap:wrap}
+}
+@media (max-width:640px){
+  nav .wrap{gap:10px}
+  nav .me{font-size:16px}
+  nav .links{gap:12px}
+  nav .links a{font-size:14px}
+  .theme{width:32px;height:32px;font-size:15px}
+  .hero .intro .role{font-size:21px}
+  .aff{font-size:15px;align-items:flex-start}
+  .aff .logo{margin-top:1px}
+  .interests{margin-bottom:28px}
+  .interests li{font-size:14px;padding:5px 12px}
+  .hero-band{margin-bottom:48px}
+  .section{padding-bottom:72px}
+  h2{font-size:30px;margin-bottom:20px}
+  .project,.detail{padding:28px 0 36px;gap:22px}
+  .project h3,.detail h2{font-size:25px;line-height:1.2}
+  .project p,.detail p{font-size:17px}
+  .flow{padding:20px;margin-top:22px;border-radius:16px}
+  .page-head{padding:48px 0 32px}
+  .page-head h1{font-size:40px}
+  .page-head p{font-size:18px}
+  .buet .wrap{padding-top:56px;padding-bottom:52px}
+  .facts{margin-bottom:32px}
+  .awards{padding:64px 0 72px}
+  .also{padding:36px 0 72px}
+  .card-end{padding:32px 22px}
+  .ce-note{font-size:17px}
+  .ce-actions{display:grid;grid-template-columns:1fr 1fr}
+  .ce-actions .copy{grid-column:1/-1}
+  .cbtn{justify-content:center}
+  .ce-side .who{margin:0}
+}
+@media (max-width:380px){nav .links a[href$="#contact"]{display:none}}
