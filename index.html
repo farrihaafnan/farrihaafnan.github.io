@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farriha Afnan</title>
+<meta name="description" content="Farriha Afnan, Adjunct Lecturer and Research Assistant in Computer Science and Engineering at BUET. Machine learning, deep generative models and graph neural networks.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<nav><div class="wrap">
+<a class="me" href="index.html">Farriha Afnan</a>
+<div class="links"><a href="#research" data-spy="research">Research</a><a href="projects.html" data-spy="engineering">Projects</a><a class="hide-sm" href="#awards" data-spy="awards">Awards</a><a href="#contact" data-spy="contact">Contact</a><button class="theme" aria-label="Switch light or dark mode"></button></div>
+</div></nav>
+
+<main>
+<div class="hero-band"><div class="wrap">
+<section class="hero">
+<div>
+<h1>Farriha<br>Afnan</h1>
+<div class="intro">
+<p class="role">Adjunct Lecturer and Research Assistant</p>
+<p class="aff"><img src="assets/buet-logo.svg" alt="" class="logo">Department of Computer Science and Engineering, BUET</p>
+</div>
+<ul class="interests" aria-label="Research interests"><li>Machine learning</li><li>Deep generative models</li><li>Graph neural networks</li></ul>
+<div class="actions"><a class="btn primary" href="mailto:farriha.one@gmail.com"><i class="ti ti-mail"></i>Email</a><a class="btn" href="farriha-afnan-cv.pdf"><i class="ti ti-file-text"></i>CV</a><a class="btn" href="https://www.linkedin.com/in/farriha-afnan"><i class="ti ti-brand-linkedin"></i>LinkedIn</a></div>
+</div>
+<div class="portrait-wrap"><div class="portrait"><img src="farriha.png" alt="Portrait of Farriha Afnan" width="372" height="400"></div></div>
+</section>
+</div></div>
+<div class="wrap">
+
+<section class="section" id="research">
+<h2>Research</h2>
+
+<article class="project">
+<div class="b-meta"><div class="b-when"><b>2025 to present</b><span>Undergraduate thesis</span></div><div class="b-group"><p class="grp">People</p><ul class="meta b-people"><li class="row"><img src="assets/buet-logo.svg" alt="BUET" class="logo lg"><span><a href="https://cse.buet.ac.bd/faculty/faculty_detail/atif">Dr. Atif Hasan Rahman</a><small>Supervisor, BUET</small></span></li><li class="row"><img src="assets/baylor-logo.png" alt="Baylor College of Medicine" class="logo lg"><span><a href="https://www.bcm.edu/research/faculty-labs/hassan-samee-lab">Dr. Md. Abul Hassan Samee</a><small>Collaborator, Baylor College of Medicine</small></span></li></ul></div><div class="tags-s"><span class="status"><i class="ti ti-file-text"></i>Preprint in preparation</span></div></div>
+<div>
+<h3>scCrossGEN: cross-organ single-cell transcriptomic translation</h3>
+<p>Some organs are hard to sample from a living donor. scCrossGEN generates a donor's single-cell transcriptomes for such an organ from cells collected in an accessible one, and learns from unpaired data.</p>
+<div class="flow" aria-label="How scCrossGEN works">
+<div class="step"><b>Cells from an accessible organ</b><span>Single-cell RNA-seq from one donor</span></div>
+<div class="step model"><b>scCrossGEN</b><span>VAE with adversarial training, CycleGAN-inspired</span></div>
+<div class="step"><b>Cells for a hard-to-sample organ</b><span>Same donor, generated</span></div>
+</div>
+<p class="result"><span>Result</span>Outperforms scGen and scPRAM across multiple organ systems.</p>
+<details><summary><i class="ti ti-chevron-right"></i>Methods and keywords</summary>
+<ul><li>CycleGAN-inspired, VAE-based generative framework with adversarial training.</li><li>Translates single-cell transcriptomes between organs from cell-level unpaired data.</li></ul>
+<div class="tags"><span>Single-cell transcriptomics</span><span>Deep generative models</span><span>Variational autoencoders</span><span>Adversarial learning</span><span>Scanpy</span><span>DESeq2</span></div>
+</details>
+</div>
+</article>
+
+<article class="project">
+<div class="b-meta"><div class="b-when"><b>Sep 2026 to present</b><span>Research Assistant</span></div><div class="b-group"><p class="grp">People</p><ul class="meta b-people"><li class="row"><img src="assets/buet-logo.svg" alt="BUET" class="logo lg"><span><a href="https://cse.buet.ac.bd/faculty/faculty_detail/atif">Dr. Atif Hasan Rahman</a><small>Supervisor, BUET</small></span></li><li class="row"><img src="assets/buet-logo.svg" alt="BUET" class="logo lg"><span><a href="https://cse.buet.ac.bd/faculty/faculty_detail/sadia">Dr. Sadia Sharmin</a><small>Supervisor, BUET</small></span></li></ul></div><div class="tags-s"><span class="status"><i class="ti ti-coin"></i>UGC-ICSETEP research grant</span><span class="status"><i class="ti ti-progress"></i>In progress</span></div></div>
+<div>
+<h3>Patient-specific deterioration pathways from ICU data</h3>
+<p>ICU mortality models output a risk score but not the clinical path that leads to it. This project recovers, for each patient, the sequence of interacting events that drives deterioration.</p>
+<div class="flow" aria-label="How the ICU project works">
+<div class="step"><b>ICU records</b><span>Vitals, labs and interventions, irregular in time</span></div>
+<div class="step"><b>Event graph</b><span>Clinical concepts as nodes, timed relations as edges</span></div>
+<div class="step model"><b>Temporal graph network</b><span>With an edge-importance module</span></div>
+<div class="step"><b>Risk and pathway</b><span>Mortality prediction plus the events behind it</span></div>
+</div>
+<details><summary><i class="ti ti-chevron-right"></i>Methods and keywords</summary>
+<ul><li>Multimodal, continuous-time event graphs built from irregular longitudinal ICU records.</li><li>A temporal graph network for mortality prediction, with an edge-importance module that extracts each patient's deterioration pathway.</li></ul>
+<div class="tags"><span>Graph neural networks</span><span>Temporal graph networks</span><span>Large language models</span><span>Electronic health records</span><span>Mortality prediction</span></div>
+</details>
+</div>
+</article>
+
+<article class="project">
+<div class="b-meta"><div class="b-when"><b>Feb 2026</b><span>Research project</span></div><div class="b-group"><p class="grp">People</p><ul class="meta b-people"><li class="row"><img src="assets/buet-logo.svg" alt="BUET" class="logo lg"><span><a href="https://cse.buet.ac.bd/faculty/faculty_detail/nafis">Nafis Tahmid</a><small>Supervisor, BUET</small></span></li></ul></div><div class="tags-s"></div></div>
+<div>
+<h3>Multi-omics disease prediction via graph-based cross-modal imputation</h3>
+<p>Patients often have only one type of omics data measured. This framework predicts disease outcomes from that single type and reconstructs the missing modalities at the same time.</p>
+<div class="flow" aria-label="How the multi-omics model works">
+<div class="step"><b>One omics type</b><span>The only measurement available</span></div>
+<div class="step model"><b>Generator and graph neural network</b><span>SynOmics-inspired, using feature-level and bipartite links</span></div>
+<div class="step"><b>Missing omics and diagnosis</b><span>Reconstructed and predicted together</span></div>
+</div>
+<details><summary><i class="ti ti-chevron-right"></i>Methods and keywords</summary>
+<ul><li>A generator network for cross-modal imputation.</li><li>A graph neural network over feature-level and bipartite relationships across omics.</li></ul>
+<div class="tags"><span>Multi-omics</span><span>Graph neural networks</span><span>Imputation</span><span>Disease prediction</span></div>
+</details>
+</div>
+</article>
+</section>
+
+<section class="section" id="engineering">
+<h2>Engineering projects</h2>
+<div class="strip">
+<a href="projects.html#railway"><div class="thumb"><img src="https://i.ytimg.com/vi/ZBSsY1fcaDw/hqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="ti ti-player-play"></i></span></div><h3>Railway E-Ticketing</h3><p>Best UI/UX, BUET CSE Fest Hackathon 2024.</p></a>
+<a href="projects.html#voyager"><div class="thumb"><img src="https://i.ytimg.com/vi/GZbvFQXaypg/hqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="ti ti-player-play"></i></span></div><h3>Deep Vision Voyager</h3><p>Raspberry Pi robot with live object detection.</p></a>
+<a href="projects.html#learnly"><div class="thumb"><img src="https://i.ytimg.com/vi/iaiq3FPWz7k/hqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="ti ti-player-play"></i></span></div><h3>Learnly</h3><p>Tuition platform for students and teachers.</p></a>
+<a href="projects.html#crowd"><div class="thumb"><img src="https://i.ytimg.com/vi/kTE7kvNkOj8/hqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="ti ti-player-play"></i></span></div><h3>Crowd City</h3><p>Graphics project in C and iGraphics.</p></a>
+</div>
+<a class="more" href="projects.html">All engineering projects <i class="ti ti-arrow-right"></i></a>
+</section>
+</div>
+
+<section class="buet">
+<img src="assets/ece-building-buet.jpg" alt="The ECE Building at BUET, home of the Department of CSE" loading="lazy">
+<div class="wrap">
+<div class="school"><span class="seal"><img src="assets/buet-logo.svg" alt="BUET logo"></span><div><h2>Bangladesh University of Engineering and Technology</h2><p>B.Sc. in Computer Science and Engineering, 2022 to 2026</p></div></div>
+<dl class="facts"><div><dt>CGPA</dt><dd>3.97 <span>out of 4.00</span></dd></div><div><dt>Class position</dt><dd>7th <span>of 120</span></dd></div></dl>
+<p class="teach">Now teaching at BUET as an Adjunct Lecturer</p>
+<div class="courses"><span>Database</span><span>Computer Architecture</span><span>Computer Programming</span><span>Microcontrollers</span><span>Signals and Linear Systems</span></div>
+</div>
+</section>
+<p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:ECE_Building,_BUET.jpg">ECE Building, BUET</a> by Sajid Muhaimin Choudhury, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</p>
+
+<div class="wrap">
+<section class="awards" id="awards">
+<h2>Awards</h2>
+<div class="rail">
+<div class="aw"><span class="yr">2018 to 2025</span><b>Government Talentpool Scholarship</b><span>For SSC and HSC examination results.</span></div>
+<div class="aw"><span class="yr">2022 to 2026</span><b>University Merit Scholarship</b><span>BUET, for term results.</span></div>
+<div class="aw"><span class="yr">2022, 2023, 2025</span><b>Dean's List</b><span>BUET, Levels 1, 2 and 3.</span></div>
+<div class="aw"><span class="yr">Apr 2024</span><b>1st runner-up, Project Showcasing</b><span>Skill Innovation Fest, IUT.</span></div>
+<div class="aw"><span class="yr">Oct 2024</span><b>Best UI/UX</b><span>BUET CSE Fest Hackathon.</span></div>
+</div>
+</section>
+</div>
+</main>
+
+<footer class="end" id="contact"><div class="wrap">
+<div class="card-end">
+<div class="ce-main">
+<p class="ce-note">If my work overlaps with yours, I'd be glad to hear from you.</p>
+<a class="ce-mail" href="mailto:farriha.one@gmail.com">farriha.one@gmail.com</a>
+<div class="ce-actions"><button class="cbtn copy" data-copy="farriha.one@gmail.com"><i class="ti ti-copy"></i><span>Copy email</span></button><a class="cbtn" href="farriha-afnan-cv.pdf"><i class="ti ti-file-download"></i>CV</a><a class="cbtn" href="https://www.linkedin.com/in/farriha-afnan"><i class="ti ti-brand-linkedin"></i>LinkedIn</a></div>
+</div>
+<aside class="ce-side">
+<div class="who"><img src="farriha.png" alt=""><span><b>Farriha Afnan</b><small>Adjunct Lecturer, CSE, BUET</small></span></div>
+<ul class="ce-facts"><li><i class="ti ti-map-pin"></i>Dhaka, Bangladesh</li></ul>
+</aside>
+</div>
+<div class="fine-row"><span>&copy; 2026 Farriha Afnan</span><a href="#top">Back to top <i class="ti ti-arrow-up"></i></a></div>
+</div></footer>
+<script src="site.js"></script>
+</body>
+</html>
