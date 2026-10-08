@@ -354,3 +354,14 @@ nav.over{background:var(--hero);border-color:transparent}
   .ce-side .who{margin:0}
 }
 @media (max-width:380px){nav .links a[href$="#contact"]{display:none}}
+/* phone hero: small photo beside the name (option B, 09/10) */
+@media (max-width:640px){
+  .hero{position:relative;padding-top:36px}
+  .portrait-wrap{position:absolute;top:44px;right:0;width:120px;padding:0 0 10px 10px}
+  .portrait-wrap::before{width:calc(100% - 10px);height:calc(100% - 10px);border-radius:18px}
+  .portrait{border-radius:18px}
+}
+@media (max-width:380px){
+  .hero h1{font-size:58px}
+  .portrait-wrap{width:92px}
+}
