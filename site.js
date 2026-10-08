@@ -23,6 +23,9 @@
         var link = document.querySelector('nav [data-spy="' + e.target.id + '"]');
         if (link) link.classList.toggle('on', e.isIntersecting);
       });
+      // Home stays lit until a section further down takes over
+      var home = document.querySelector('nav [data-home]');
+      if (home) home.classList.toggle('on', !spyLinks.some(function (a) { return a.classList.contains('on'); }));
     }, { rootMargin: '-45% 0px -50% 0px' });
     spyLinks.forEach(function (a) { var t = document.getElementById(a.dataset.spy); if (t) spy.observe(t); });
   }
