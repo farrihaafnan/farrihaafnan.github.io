@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Farriha Afnan</title>
+<meta name="description" content="Research by Farriha Afnan: machine learning for single-cell biology, ICU patient data and multi-omics.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<nav><div class="wrap">
+<a class="me" href="index.html">Farriha Afnan</a>
+<div class="links"><a href="research.html" aria-current="page">Research</a><a href="projects.html">Projects</a><a class="hide-sm" href="index.html#awards">Awards</a><a href="#contact">Contact</a><button class="theme" aria-label="Switch light or dark mode"></button></div>
+</div></nav>
+
+<main class="wrap">
+<header class="page-head">
+<h1>Research</h1>
+<p>Machine learning for biology and medicine, with deep generative models and graph neural networks.</p>
+</header>
+
+<section class="research-list">
+<article class="project" id="sccrossgen">
+<div class="b-meta"><div class="b-when"><b>2025 to present</b><span>Undergraduate thesis</span></div><div class="b-group"><p class="grp">People</p><ul class="meta b-people"><li class="row"><img src="assets/buet-logo.svg" alt="BUET" class="logo lg"><span><a href="https://cse.buet.ac.bd/faculty/faculty_detail/atif">Dr. Atif Hasan Rahman</a><small>Supervisor, BUET</small></span></li><li class="row"><img src="assets/baylor-logo.png" alt="Baylor College of Medicine" class="logo lg"><span><a href="https://www.bcm.edu/research/faculty-labs/hassan-samee-lab">Dr. Md. Abul Hassan Samee</a><small>Collaborator, Baylor College of Medicine</small></span></li></ul></div><div class="tags-s"><span class="status"><i class="ti ti-file-text"></i>Preprint in preparation</span></div></div>
+<div>
+<h3>scCrossGEN: cross-organ single-cell transcriptomic translation</h3>
+<p>Some organs are hard to sample from a living donor. scCrossGEN generates a donor's single-cell transcriptomes for such an organ from cells collected in an accessible one, and learns from unpaired data.</p>
+<div class="flow" aria-label="How scCrossGEN works">
+<div class="step"><b>Cells from an accessible organ</b><span>Single-cell RNA-seq from one donor</span></div>
+<div class="step model"><b>scCrossGEN</b><span>VAE with adversarial training, CycleGAN-inspired</span></div>
+<div class="step"><b>Cells for a hard-to-sample organ</b><span>Same donor, generated</span></div>
+</div>
+<p class="result"><span>Result</span>Outperforms scGen and scPRAM across multiple organ systems.</p>
+<details><summary><i class="ti ti-chevron-right"></i>Methods and keywords</summary>
+<ul><li>CycleGAN-inspired, VAE-based generative framework with adversarial training.</li><li>Translates single-cell transcriptomes between organs from cell-level unpaired data.</li></ul>
+<div class="tags"><span>Single-cell transcriptomics</span><span>Deep generative models</span><span>Variational autoencoders</span><span>Adversarial learning</span><span>Scanpy</span><span>DESeq2</span></div>
+</details>
+</div>
+</article>
+
+<article class="project" id="icu">
+<div class="b-meta"><div class="b-when"><b>Sep 2026 to present</b><span>Research Assistant</span></div><div class="b-group"><p class="grp">People</p><ul class="meta b-people"><li class="row"><img src="assets/buet-logo.svg" alt="BUET" class="logo lg"><span><a href="https://cse.buet.ac.bd/faculty/faculty_detail/atif">Dr. Atif Hasan Rahman</a><small>Supervisor, BUET</small></span></li><li class="row"><img src="assets/buet-logo.svg" alt="BUET" class="logo lg"><span><a href="https://cse.buet.ac.bd/faculty/faculty_detail/sadia">Dr. Sadia Sharmin</a><small>Supervisor, BUET</small></span></li></ul></div><div class="tags-s"><span class="status"><i class="ti ti-coin"></i>UGC-ICSETEP research grant</span><span class="status"><i class="ti ti-progress"></i>In progress</span></div></div>
+<div>
+<h3>Patient-specific deterioration pathways from ICU data</h3>
+<p>ICU mortality models output a risk score but not the clinical path that leads to it. This project recovers, for each patient, the sequence of interacting events that drives deterioration.</p>
+<div class="flow" aria-label="How the ICU project works">
+<div class="step"><b>ICU records</b><span>Vitals, labs and interventions, irregular in time</span></div>
+<div class="step"><b>Event graph</b><span>Clinical concepts as nodes, timed relations as edges</span></div>
+<div class="step model"><b>Temporal graph network</b><span>With an edge-importance module</span></div>
+<div class="step"><b>Risk and pathway</b><span>Mortality prediction plus the events behind it</span></div>
+</div>
+<details><summary><i class="ti ti-chevron-right"></i>Methods and keywords</summary>
+<ul><li>Multimodal, continuous-time event graphs built from irregular longitudinal ICU records.</li><li>A temporal graph network for mortality prediction, with an edge-importance module that extracts each patient's deterioration pathway.</li></ul>
+<div class="tags"><span>Graph neural networks</span><span>Temporal graph networks</span><span>Large language models</span><span>Electronic health records</span><span>Mortality prediction</span></div>
+</details>
+</div>
+</article>
+
+<article class="project" id="multiomics">
+<div class="b-meta"><div class="b-when"><b>Feb 2026</b><span>Research project</span></div><div class="b-group"><p class="grp">People</p><ul class="meta b-people"><li class="row"><img src="assets/buet-logo.svg" alt="BUET" class="logo lg"><span><a href="https://cse.buet.ac.bd/faculty/faculty_detail/nafis">Nafis Tahmid</a><small>Supervisor, BUET</small></span></li></ul></div><div class="tags-s"></div></div>
+<div>
+<h3>Multi-omics disease prediction via graph-based cross-modal imputation</h3>
+<p>Patients often have only one type of omics data measured. This framework predicts disease outcomes from that single type and reconstructs the missing modalities at the same time.</p>
+<div class="flow" aria-label="How the multi-omics model works">
+<div class="step"><b>One omics type</b><span>The only measurement available</span></div>
+<div class="step model"><b>Generator and graph neural network</b><span>SynOmics-inspired, using feature-level and bipartite links</span></div>
+<div class="step"><b>Missing omics and diagnosis</b><span>Reconstructed and predicted together</span></div>
+</div>
+<details><summary><i class="ti ti-chevron-right"></i>Methods and keywords</summary>
+<ul><li>A generator network for cross-modal imputation.</li><li>A graph neural network over feature-level and bipartite relationships across omics.</li></ul>
+<div class="tags"><span>Multi-omics</span><span>Graph neural networks</span><span>Imputation</span><span>Disease prediction</span></div>
+</details>
+</div>
+</article>
+</section>
+</main>
+
+<footer class="end" id="contact"><div class="wrap">
+<div class="card-end">
+<div class="ce-main">
+<p class="ce-note">If my work overlaps with yours, I'd be glad to hear from you.</p>
+<a class="ce-mail" href="mailto:farriha.one@gmail.com">farriha.one@gmail.com</a>
+<div class="ce-actions"><button class="cbtn copy" data-copy="farriha.one@gmail.com"><i class="ti ti-copy"></i><span>Copy email</span></button><a class="cbtn" href="farriha-afnan-cv.pdf"><i class="ti ti-file-download"></i>CV</a><a class="cbtn" href="https://www.linkedin.com/in/farriha-afnan"><i class="ti ti-brand-linkedin"></i>LinkedIn</a></div>
+</div>
+<aside class="ce-side">
+<div class="who"><img src="assets/farriha-face.jpg" alt=""><span><b>Farriha Afnan</b><small>Adjunct Lecturer, CSE, BUET</small></span></div>
+<ul class="ce-facts"><li><i class="ti ti-map-pin"></i>Dhaka, Bangladesh</li></ul>
+</aside>
+</div>
+<div class="fine-row"><span>&copy; 2026 Farriha Afnan</span><a href="#top">Back to top <i class="ti ti-arrow-up"></i></a></div>
+</div></footer>
+<script src="site.js"></script>
+</body>
+</html>

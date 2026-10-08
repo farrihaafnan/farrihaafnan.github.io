@@ -2,20 +2,20 @@
   --hero:#DDE8DE;--hero-ink:#16241B;--block:#2C6743;
   --foot:#16241B;
   --bg:#F4F5F2;--bg2:#E9ECE7;--ink:#14181B;--body:#394047;--soft:#5B646B;--line:#D6DAD4;
-  --accent:#2C6743;--accent-ink:#F4F5F2;--tint:#DCE5DC;--scrim:rgba(10,14,12,.72);
+  --accent:#2C6743;--accent-ink:#F4F5F2;--card:#FFFFFF;--tint:#DCE5DC;--scrim:rgba(10,14,12,.72);
 }
 :root[data-theme="dark"]{
   --hero:#16231B;--hero-ink:#E9EDEF;--block:#A9CDB0;
   --foot:#141B17;
   --bg:#0F1214;--bg2:#171B1E;--ink:#E9EDEF;--body:#BAC2C8;--soft:#8F989F;--line:#262C31;
-  --accent:#A9CDB0;--accent-ink:#0F1214;--tint:#1B2420;--scrim:rgba(8,10,12,.74);
+  --accent:#A9CDB0;--accent-ink:#0F1214;--card:#1A2023;--tint:#1B2420;--scrim:rgba(8,10,12,.74);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --hero:#16231B;--hero-ink:#E9EDEF;--block:#A9CDB0;
     --foot:#141B17;
     --bg:#0F1214;--bg2:#171B1E;--ink:#E9EDEF;--body:#BAC2C8;--soft:#8F989F;--line:#262C31;
-    --accent:#A9CDB0;--accent-ink:#0F1214;--tint:#1B2420;--scrim:rgba(8,10,12,.74);
+    --accent:#A9CDB0;--accent-ink:#0F1214;--card:#1A2023;--tint:#1B2420;--scrim:rgba(8,10,12,.74);
   }
 }
 *{box-sizing:border-box}
@@ -364,4 +364,51 @@ nav.over{background:var(--hero);border-color:transparent}
 @media (max-width:380px){
   .hero h1{font-size:58px}
   .portrait-wrap{width:92px}
+}
+
+/* ---- round 4 (09/10): about, research overview, engineering grid, research page ---- */
+.about{display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px;padding:0 0 112px}
+.about h2{margin:0}
+.about p{margin:0;font-size:22px;line-height:1.55;color:var(--body);max-width:60ch}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:0 0 36px}
+.sec-head h2{margin:0}
+.ov{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ov-card{display:flex;flex-direction:column;gap:12px;padding:28px;border-radius:20px;background:var(--card);text-decoration:none;color:inherit;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s}
+.ov-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px -16px rgba(20,24,27,.25)}
+.ov-when{font-size:14px;font-weight:600;color:var(--accent)}
+.ov-card h3{font-size:22px;line-height:1.25;font-weight:500;letter-spacing:-.01em;margin:0}
+.ov-card p{margin:0;font-size:16px;line-height:1.55;color:var(--body)}
+.ov-hi{display:flex;gap:8px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--ink);font-weight:500}
+.ov-hi i{color:var(--accent);font-size:18px;margin-top:1px}
+.ov-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.status .logo{width:18px;height:18px;padding:0;background:none}
+.eng-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.eng-grid a{text-decoration:none;color:inherit}
+.eng-grid a:hover .thumb img{transform:scale(1.04)}
+.eng-grid h3{font-size:19px;font-weight:500;margin:14px 0 4px}
+.eng-grid p{margin:0;color:var(--soft);font-size:15px;line-height:1.5}
+#engineering>.btn,.sec-head .btn{white-space:nowrap}
+#engineering>.btn{margin-top:32px}
+.research-list .project:first-child{border-top:0}
+@media (max-width:900px){
+  .about{grid-template-columns:1fr;gap:16px;padding-bottom:72px}
+  .about p{font-size:19px}
+  .ov{grid-template-columns:1fr;gap:14px}
+  .eng-grid{grid-template-columns:1fr 1fr;gap:20px 14px}
+  /* research page on phone: date above the title, each project a card */
+  .project .b-meta{display:contents}
+  .project .b-when{order:-2;border:0;padding:0;display:flex;flex-wrap:wrap;gap:0 8px;align-items:baseline}
+  .project .b-when b{font-size:15px;font-weight:600;color:var(--accent);letter-spacing:0}
+  .project .b-when span{font-size:15px;margin:0}
+  .project .b-when span::before{content:"\00b7";margin-right:8px;color:var(--soft)}
+  .project .b-group{margin-top:6px}
+  .project,.research-list .project:first-child{background:var(--card);border:0;border-radius:20px;padding:24px 20px 28px;margin-bottom:16px;gap:16px}
+  .project h3{margin-top:-4px}
+}
+@media (max-width:640px){
+  .ov-card{padding:22px 20px}
+  .ov-card h3{font-size:20px}
+  .eng-grid h3{font-size:16px;margin-top:10px}
+  .eng-grid p{font-size:14px}
+  .sec-head .btn{height:40px;padding:0 14px;font-size:15px}
 }
