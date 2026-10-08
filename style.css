@@ -126,7 +126,7 @@ details li{margin-bottom:6px}
 /* contact footer */
 
 /* projects page */
-.page-head{padding:80px 0 48px}
+.page-head{padding:44px 0 32px}
 .page-head h1{font-size:64px;margin-bottom:16px}
 .page-head p{font-size:20px;line-height:1.55;color:var(--body);max-width:56ch;margin:0}
 .detail{display:grid;grid-template-columns:230px minmax(0,1fr);gap:56px;padding:48px 0 56px;border-top:1px solid var(--line)}
@@ -285,7 +285,7 @@ ul.b-people{gap:16px}
 
 /* hero: colour band, bigger name, less air */
 .hero-band{background:var(--hero);margin-bottom:104px}
-.hero{padding:56px 0 64px;gap:80px;grid-template-columns:minmax(0,1fr) 420px;align-items:center;min-height:min(720px,calc(100vh - 64px))}
+.hero{padding:40px 0 56px;gap:80px;grid-template-columns:minmax(0,1fr) 420px;align-items:center}
 .hero h1{font-size:132px;line-height:.92;letter-spacing:-.05em;margin:0 0 32px;color:var(--hero-ink)}
 .hero .interests li{background:rgba(255,255,255,.55);color:var(--hero-ink)}
 :root[data-theme="dark"] .hero .interests li{background:rgba(255,255,255,.07)}
@@ -339,7 +339,7 @@ nav.over{background:var(--hero);border-color:transparent}
   .project h3,.detail h2{font-size:25px;line-height:1.2}
   .project p,.detail p{font-size:17px}
   .flow{padding:20px;margin-top:22px;border-radius:16px}
-  .page-head{padding:48px 0 32px}
+  .page-head{padding:28px 0 24px}
   .page-head h1{font-size:40px}
   .page-head p{font-size:18px}
   .buet .wrap{padding-top:56px;padding-bottom:52px}
