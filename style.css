@@ -510,3 +510,9 @@ nav .links a i{display:none}
   .course{padding:22px 0}
 }
 @media (max-width:380px){.tab{font-size:14px;padding:0 12px 0 8px;gap:6px}}
+/* 09/10: titles stand alone; BUET band links to Teaching */
+.page-head h1{margin-bottom:0}
+.buet a.teach{display:inline-flex;align-items:center;gap:8px;margin:0;text-decoration:none;border-bottom:1px solid rgba(242,244,243,.42);padding-bottom:4px;transition:border-color .2s}
+.buet a.teach:hover{border-color:#F2F4F3}
+.buet a.teach i{transition:transform .2s}
+.buet a.teach:hover i{transform:translateX(4px)}
